@@ -1,3 +1,6 @@
+<%@page import="controller.Employee"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="controller.ListEmployee"%>
 <%@page import="model.HandlerPass"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -14,14 +17,15 @@
 		if(pass.equals(HandlerPass.pass)){
 			HttpSession session1 = request.getSession(true);
 			session1.setAttribute("sessionName", name);
+			ListEmployee.container = new ArrayList<Employee>();
 			
-			RequestDispatcher rd = request.getRequestDispatcher("home.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/home.jsp");
 			rd.forward(request, response);
 		}
 		else{
 			request.setAttribute("msg", "Login failed");
 			
-			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
 			rd.forward(request, response);
 		}
 	%>

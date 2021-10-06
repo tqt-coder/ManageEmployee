@@ -42,7 +42,7 @@
 <body>
     <div class="form-login">
     	<h4><%= request.getAttribute("msg") != null ? request.getAttribute("msg"): " " %></h4>
-        <form action="login.jsp" method="POST" class="form-wrap">
+        <form action="/WebJSP/login.jsp" method="POST" class="form-wrap">
             <table class="form-table">
                 <tr>
                     <td>USERNAME <span class="form-compulsory">*</span> </td>

@@ -61,7 +61,7 @@
 <body>
     <div class="app">
     <%@include file="header.jsp" %>
-        <form action="Handler.jsp" class="form-employee" method="Post">
+        <form action="/WebJSP/Handler.jsp" class="form-employee" method="Post">
             <h2 class="employee-tilte">Add an Employee</h2>
             <span class="employee-infor">Name:</span>
             <input type="text" name="nameEmployee"
@@ -83,7 +83,6 @@
                 <option value="FSU4">FSU4</option>
             </select>
             <input type="submit" class="employee-btn" value="Add employee">
-            <% request.setAttribute("id", 1); %>
         </form>
         <%@include file="footer.jsp" %>
     </div>

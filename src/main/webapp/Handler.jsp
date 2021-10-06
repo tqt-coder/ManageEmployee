@@ -16,6 +16,7 @@
 	<td><jsp:getProperty property="nameEmployee" name="em"/></td>
 	
 	<% 
+		
 		request.setAttribute("msg2", "Thêm thành công");
 		String name = request.getParameter("nameEmployee");
 		String gender = request.getParameter("gender");
@@ -23,7 +24,7 @@
 		String department = request.getParameter("department");
 		Employee e1 = new Employee(name,gender,date,department);
 		ListEmployee.container.add(e1);
-		RequestDispatcher rd = request.getRequestDispatcher("home.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/home.jsp");
 		rd.forward(request, response);
 	%>
          
